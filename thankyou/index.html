@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <!-- Required meta tags --> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <title>Thank You!</title> 
+  <link type="image/x-icon" rel="shortcut icon" href="favicon.ico"> 
+  <!-- Tailwind --> 
+  <!-- Custom css --> 
+  <link href="thank.css" rel="stylesheet"> 
+  <!-- Fonts --> 
+  <link rel="preconnect" href="fonts.gstatic.com"> 
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+    }
+  </style> 
+ </head> 
+ <body> 
+  <main> 
+   <div class="pt-8 container mx-auto"> 
+    <h1 class="text-4xl lg:text-5xl font-bold md:text-center lg:text-center" style="text-align: center"> Congratulations! You have completed the registration by <span class="text-blue">90%!</span> </h1> 
+    <p class="titleDesc">To complete registration <span class="text-blue">100%</span> <br class="hidden md:block lg:block">  - answer the incoming
+call from our manager  </p> 
+   </div> 
+   <div class="downloadContainer"> 
+    <span id="download">Personal account ready </span> 
+   </div> 
+   <div style="display: flex; justify-content: center"> 
+    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 52 52">
+     <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+     <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+    </svg> 
+   </div> 
+   <div class="container mx-auto"> 
+    <h2 class="text-3xl lg:text-5xl text-center font-bold mt-16" style="text-align: center; margin-top: 30px"> How to complete registration? </h2> 
+    <div class="flex-col"> 
+     <div class="card bg-white px-4 lg:px-8 pt-5 pb-10"> 
+      <p class="step text-lg font-medium"> Step 1 </p> 
+      <p class="card-heading text-white mt-2 font-medium text-lg"> Read the information on the website (done)</p> 
+      <p class="text-white text mt-4"> Successfully read all the information on the site </p> 
+     </div> 
+     <div class="card bg-white px-4 lg:px-8 pt-5 pb-10 "> 
+      <p class="step text-lg font-medium"> Step 2 </p> 
+      <p class="card-heading text-white mt-2 font-medium text-lg">
+Sending contacts (done) </p> 
+      <p class="text-white text mt-4"> 
+Already sent your contact details for the expert </p> 
+     </div> 
+     <div class="card bg-white px-4 lg:px-8 pt-5 pb-10"> 
+      <p class="step text-lg font-medium"> Step 3 </p> 
+      <p class="card-heading mt-2 font-medium text-lg">Answer the manager
+</p> 
+      <p class="text mt-4"> Answer an incoming call from our manager to confirm registration </p> 
+     </div> 
+    </div> 
+    <h3 class="heading"> Your queue number: 6. <br> <span class="leading-extra-tight"> Expect a call, all the best! </span> </h3> 
+   </div> 
+  </main> 
+  <script>
+    let params = (new URL(document.location)).searchParams;
+    let redirectUrl = params.get("redirect");
+    function changeLocation(delay){
+        setTimeout(function() {
+          redirectUrl ? location.replace(redirectUrl) : null;
+        }, delay);
+    }
+    changeLocation(10000);
+</script>   
+ </body>
+</html>
